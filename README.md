@@ -10,6 +10,7 @@
 ### <img width="1283" height="200" alt="image" src="https://github.com/user-attachments/assets/4857b2d9-7bbf-451a-a93f-1724c9c19fd2" />
 
 ---
+• This code explores the usage of ```transpose()```, ```'```, and ```.'```. The goal is to determine if there's a difference in using three of them. Observed in the program's output, for real numbers, the values of the numbers in the matrix remain unchanged. But it is a different story for complex numbers, ```transpose()``` and ```.'``` are the same, which just flips the rows into columns and vice versa. ```'``` however, does a Complex Conjugate Transpose in which it changes the sign of imaginary numbers from ```j``` to ```-j``` as well as flips rows and columns. (Note that typing j in the variable displays it as i in the Command Window.)
 
 ### Code:
 ```matlab
@@ -93,12 +94,6 @@ ans =
 
 ```
 
-### Explanation:
-
-```
-  
-
-```
 ---
 
 ## 2️⃣ PROBLEM 2
@@ -109,6 +104,7 @@ ans =
 ---
 
 ## 1. Inverse Method
+• This code is based on the formula X = (A^-1)(B) where. It uses the ```inv()``` function to find the inverse of a Matrix. Then the formula was done through the line of code ```inver = inv(A)*B```.
 
 ### Code:
 ```matlab
@@ -156,16 +152,13 @@ inver =
 
 ```
 
-### Explanation:
-
-```
-```
-
 ---
 
 ## 2. Cramer's Rule
+• This code uses a ```length``` function that takes the length of Matrix B to be stored as a number in variable C. Then it uses the ```zeros``` function to make a matrix with dimensions of the length of B as rows, and 1 column full of zeros. It then uses a ```for loop``` that uses i as an iteration from 1 to the length of B (C), inside it is Ai, a variable to copy the Matrix A to be used as a template to change the column to the constant column B per iteration. The line ```Ai(:,i) = B;``` is the line of code that replaces the column i with the constant matrix, then ```cram(i) = det(Ai)/det(A);``` is a line of code that puts the value of the determinant of Ai divided by the determinant of A into the i-th column of ```cram```. It repeats until it reaches the length of Matrix B.
 
 ### Code:
+
 ```matlab
 
 C = length(B);
@@ -192,11 +185,6 @@ cram =
          0
     1.0000
 
-```
-
-### Explanation:
-
-```
 ```
 
 ---
